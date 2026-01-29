@@ -45,7 +45,6 @@ export default function DepartmentDetails() {
             {new Date(department.createdAt).toLocaleString()}
           </p>
         </div>
-
         <button
           onClick={() => navigate(-1)}
           className="mt-6 bg-gray-800 text-white px-4 py-2 rounded hover:bg-gray-900"

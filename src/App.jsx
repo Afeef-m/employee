@@ -5,8 +5,6 @@ import Register from "./pages/register";
 import Departments from "./pages/departments";
 import DepartmentDetails from "./pages/DepartmentDetails";
 
-
-
 function App() {
   return (
     <Routes>
