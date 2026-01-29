@@ -3,12 +3,12 @@ import { useParams, useNavigate } from "react-router-dom";
 import api from "../api/api";
 
 export default function DepartmentDetails() {
-  const { id } = useParams();
+  const { deptId } = useParams();
   const navigate = useNavigate();
   const [department, setDepartment] = useState(null);
   const fetchDepartment = async () => {
     try {
-      const res = await api.get(`/department/${id}`);
+      const res = await api.get(`/department/${deptId}`);
       setDepartment(res.data);
     } catch (err) {
       console.error(err.response?.data);
@@ -17,7 +17,7 @@ export default function DepartmentDetails() {
   };
   useEffect(() => {
     fetchDepartment();
-  }, [id]);
+  }, [deptId]);
 
   if (!department) {
     return (
